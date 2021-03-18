@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact | square eyes</title>
+        <meta name="description" content="login page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/85b41cf053.js" crossorigin="anonymous"></script>
+        <link href="css/stylesform.css" rel="stylesheet">
+        <link rel="icon" href="data:;base64,="/>
+    </head>
+    <body class="type">
+        <div class="blur"></div>
+        <!-- <div class="feedback"></div> -->
+        <form action="/Contact" method="POST" class="loginform">
+            <div class="exit">
+                <a href="index.html" aria-label="exit" class="exit"><i class="fas fa-times"></i></a>
+            </div>
+            <section>
+                <p>Please contact us by sending us an mail</p>
+            </section>
+            <section>
+                <div class="form-fillout">
+                    <label for="fullname" class="form_text">Your fullname</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" class="form-input">
+                </div>
+                <div class="form-fillout">
+                    <label for="email" class="form_text">email</label>
+                    <input type="email" id="email" name="email" placeholder="name@exemple.com" class="form-input">
+                    <div class="form_error" id="email_error">Please enter a valid e-mail adress</div>
+                </div>
+                <div class="form-fillout">
+                    <label for="subject" class="form_text">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" class="form-input">
+                </div>
+                <textarea id="message" class="form-message" placeholder="Message"></textarea>
+                <!-- <div class="form-fillout">
+                    <label for="password" class="form_text">password</label>
+                    <input type="password" id="password" name="password" placeholder="password" class="form-input">
+                </div> -->
+
+                <!-- <div class="check">
+                    <label for="producer">producer</label>
+                    <input type="radio" id="producer" name="producer" value="producer">
+                    <label for ="viewer">viewer</label>
+                    <input type="radio" id="viewer" name="viewer" value="viewer">
+                </div> -->
+                <!-- <div class="check">
+                    <label for="remember">remember me</label>
+                    <input type="checkbox" value="remember me" id="remember" name="remember"><br><br>
+                </div> -->
+                <div class="container">
+                    <button type="submit" disabled>send</button>
+                </div>
+                <div class="feedback container"></div>
+            </section>
+        </form>
+        
+        <script src="js/contact.js"></script>
+    </body>
+</html>

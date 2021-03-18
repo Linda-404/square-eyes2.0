@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sign up | square eyes</title>
+        <meta name="description" content="sign up page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/85b41cf053.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
+        <link href="css/stylesform.css" rel="stylesheet">
+    </head>
+    <body class="type">
+        <div class="blur"></div>
+
+        <form action="/signup" method="POST" class="signupform">
+            <div class="exit">
+                <a href="index.html" aria-label="exit" class="exit"><i class="fas fa-times"></i></a>
+            </div>
+            <section class="form-title">
+                <div class="current">sign up</div>
+                <a href="loginviewer.html">log in</a>
+            </section>
+            <div class="form-fillout">
+                <label for="first_name">first name</label>
+                <input type="text" name="firstname" id="firstname" placeholder="first name" class="form-input">
+                <div class="form_error" id="firstname_error">Please enter your first name</div>
+            </div>
+            <div class="form-fillout">
+                <label for="last_name">last name</label>
+                <input type="text" name="lastname" id="lastname" placeholder="last name" class="form-input">
+                <div class="form_error" id="lastname_error">Please enter your last name</div>
+            </div>
+            <div class="form-fillout">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" placeholder="name@example.com" class="form-input">
+                <div class="form_error" id="email_error">Please enter a valid e-mail adress</div>
+            </div>
+            <div class="form-fillout">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" placeholder="password" class="form-input">
+                <div class="form_error" id="password_error">Please enter a password</div>
+            </div>
+            <div class="form-fillout">
+                <label for="password_confirm">confirm password</label>
+                <input type="password" name="password_confirm" id="password_confirm" placeholder="password_confirm" class="form-input">
+                <div class="form_error" id="password_error2">your passwords must match</div>
+            </div>
+            <section class="check">
+                <label for="producer">producer</label>
+                <input type="radio" name="producer" id="producer" value="producer">   
+                <label for="viewer">viewer</label>
+                <input type="radio" name="viewer" id="viewer" value="viewer">
+                <!-- <label for="remember">remember me</label>
+                <input type="checkbox" id="remember" value="remember me"> -->
+            </section>
+            <!-- <section class="container">
+                <a href="vieweraccount.html"><input type="submit" value="sign up" class="btn"></a>
+            </section> -->
+            <div class="container">
+                <button type="submit" disabled><a href="vieweraccount.html">sign up</a></button>
+            </div>
+        </form>
+
+        <script src="js/form.js"></script>
+    </body>
+</html>

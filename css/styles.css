@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+}
+
+/*--fontstyle--*/
+
+h1, h2, nav {
+    font-family: 'Oswald', sans-serif;
+}
+h3, h4, h5, p {
+    font-family: 'Lato', sans-serif;
+}
+h1 {
+    font-size: 1.25em;
+}
+h2 {
+    font-size: 1.125em;
+}
+h3 {
+    font-size: 1em;
+}
+h4, p {
+    font-size: 0.875em;
+}
+h1, h2, h3, h4, h5, nav, p::first-letter {
+    text-transform: capitalize;
+}
+
+
+/* Homepage */
+
+/* header */
+body {
+    /* background-color: #3E3532; */
+    /* background-color: #3E3532; */
+    background-color: #25201f;
+    margin: 0;
+}
+.header-home {
+    background-image: url(../images/pictures/curtain.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-logs {
+    display: flex;
+}
+.header-btns {
+    display: flex;
+    align-self: flex-end;
+}
+.logo {
+    background-color: #F2B705;
+    margin: 10px;
+    max-width: 30em;
+    border-radius: 6px;
+}
+
+
+.header-btns2 {
+    display: flex;
+    justify-content: space-between;
+}
+.header-home2 {
+    background-color: #110A06;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.hamburgernav {
+    display: flex;
+    justify-content: space-between;
+}
+label {
+    color: #F2B705;
+    display: none;
+    margin-right: 10px;
+    font-size: 1.125em;
+}
+#hamburgermenu {
+    display: none;
+}
+
+.logo2 {
+    background-color: #F2B705;
+    margin: 10px;
+    max-width: 20em;
+    border-radius: 6px;
+}
+.searchbox {
+    display: flex;
+    margin: 10px;
+    margin-right: 15em;
+}
+.search {
+    border: none;
+    min-width: 300px;
+    padding: 5px;
+}
+.search-btn {
+    background-color: #F2B705;
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+
+.btn {
+    background-color: #F2B705;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.big-btn {
+    margin: 20px;
+    border-radius: 6px;
+    padding: 15px 60px;
+}
+.big-btn:hover{
+    cursor: pointer;
+}
+.usericon {
+    color: #F2B705;
+    font-size: 30px;
+    margin: 0;
+}
+
+/* nav */
+a {
+    text-decoration: none;
+    color: #F2B705;
+}
+
+nav {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.nav-item, .current {
+    color: #FDFCE2;
+    padding-right: 30px;
+}
+.current {
+    text-decoration: underline;
+}
+
+/* Main homepages */
+
+.fp-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title {
+    color: #FDFCE2;
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title2 {
+    color: #FDFCE2;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fp-title {
+    margin: 0;
+    font-size: 40px;
+}
+h2, h3, h4, p {
+    color: #FDFCE2;
+}
+.teaser {
+    max-width: 30em;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: scroll;
+}
+.main-teaser {
+    background-color: #110A06;
+    padding: 10px;
+    max-width: 70em;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.fpmain-title {
+    align-self: center;
+}
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: scroll;
+}
+.filmtitle {
+    color: #FDFCE2; 
+}
+.ratings {
+    color: #F2B705;
+    font-size: 16px; 
+}
+.dots {
+    color: #FDFCE2;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+.dot {
+    margin: 5px;
+}
+.account-section {
+    background-color: #110A06;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.fp-account {
+    background-color: #110A06;
+    margin: 10px;
+    width: 35em;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.fp-account-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.account-wrapper {
+    display: flex;
+}
+
+/* footer */
+footer {
+    background-color: #110A06;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-content {
+    color: #F2B705;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-item {
+    margin: 10px;
+}
+
+/* viewer account */
+
+/* .user-info {
+    background-color: #110A06;
+    display: flex;
+    justify-content: center;
+    width: 70em;
+} */
+
+
+/* .fp-main {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+/* .filminfo {
+    background-color: #3E3532;
+} */
+/* .filmtitle {
+    color: #FDFCE2; 
+}
+.dots {
+    color: #FDFCE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+.dot {
+    margin: 5px;
+} */
+.filminfo {
+    margin: 1em;
+}
+.film-img {
+    max-width: 15em;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+.film-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.genre-all {
+    max-width: 15.75em;
+    border-radius: 6px;
+}
+
+/* filmdetails page */
+
+.filmpage {
+    background-color: #110A06;
+    width: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.film {
+    max-width: 37.5em;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    -moz-box-shadow: 0px 3px 6px var(--black);
+    -webkit-box-shadow: 0px 3px 6px var(--black);
+    box-shadow: 0px 3px 6px var(--black);
+}
+.view-film {
+    position: relative;
+}
+.film-btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.filmpage-content {
+    /* background-color: #110A06; */
+    width: 37.5em;
+}
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+.plot {
+    width: 20em;
+}
+
+/* account page */
+.profile {
+    margin-top: 20px;
+    display: flex;
+}
+.user {
+    padding: 20px;
+}
+
+.programmer {
+    width: 40em;
+}
+
+@media screen and (max-width: 1100px) {
+    h1 {
+        font-size: 1.125em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 0.875em;
+    }
+    h4, p {
+        font-size: 0.75em;
+    }
+    .fp-title {
+        font-size: 30px;
+    }
+    .fp-account {
+        width: 25em;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .searchbox {
+        margin-right:10px;
+    }
+    .header-btns2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .usericon2, .btn2 {
+        margin: 10px;
+    }
+    .hamburgernav {
+        background-color: #110A06;
+        right: 0%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        top: 125px;
+        height: 155px;
+        width: auto;
+        z-index: 10;
+    }
+    #hamburgermenu:checked ~ section {
+        display: flex;
+    }
+    .main-teaser {
+        max-width: 50em;
+    }
+    .film-img {
+        max-width: 10em;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 0.875em;
+    }
+    h4, p {
+        font-size: 0.75em;
+    }
+    .fp-title {
+        font-size: 16px;
+    }
+    .hamburgernav {
+        top: 74.6px;
+    }
+    /* header style */
+    .header-btns {
+        display: flex;
+        align-self: center;
+    }
+    .logo {
+      max-width: 20em;  
+    }
+    .logo2 {
+        max-width: 10em;
+    }
+    /* nav style */
+    nav {
+        justify-content: center;
+    }
+    /* main style */
+    .main-teaser {
+        max-width: 20em;
+    }
+    .film-img {
+        max-width: 5em;
+        margin-right: 5px;
+    }
+    .genre-all {
+        max-width: 8em;
+    }
+    .ratings {
+        font-size: 8px; 
+    }
+    .dots {
+        font-size: 6px;
+    }
+    .teaser {
+        max-width: 20em;
+    }
+    .profile-img {
+        max-width: 10em;
+    }
+    .fp-account {
+        width: 10em;
+        flex-direction: column-reverse;
+    }
+    .account-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

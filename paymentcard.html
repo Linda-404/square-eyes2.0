@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>payment | square eyes</title>
+        <meta name="description" content="sign up page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/85b41cf053.js" crossorigin="anonymous"></script>
+        <link href="css/stylesform.css" rel="stylesheet">
+    </head>
+    <body class="type">
+        <div class="blur"></div>
+
+        <form action="/payment" method="POST">
+            <div class="exit">
+                <a href="filmdetails.html" aria-label="exit" class="exit"><i class="fas fa-times"></i></a>
+            </div>
+            <section class="form-title">
+                <div class="active cc"><i class="far fa-credit-card"></i></div>
+                <div class="paypal"><a href="paymentsum.html" aria-label="paypal"><i class="fab fa-cc-paypal"></i></a></div>
+            </section>
+            <legend class="legend">credit card information</legend>
+            <div class="form-fillout">
+                <label for="creditcard_number">creditcard number</label>
+                <input type="text" id="creditcard_number" name="creditcard_number" placeholder="1234 5678 9101 1121" class="form-input">
+                <i class="fab fa-cc-visa"></i>
+            </div>
+            <div class="form-fillout">
+                <label for="name_cardholder">name cardholder</label>
+                <input type="text" name="name_cardholder" id="name_cardholder" placeholder="firstname surname" class="form-input">
+            </div>
+            <div class="form-fillout">
+                <label for="expire_date">expire date</label>
+                <input type="month" name="expire_date" id="expire_date" placeholder="YYYY/MM" class="form-input">
+            </div>
+            <div class="form-fillout">
+                <label for="cvv">cvv</label>
+                <input type="number" name="cvv" id="cvv" placeholder="cvv" class="form-input">
+            </div>
+            <div class="container">
+                <button class="btn"><a href="paymentsum.html" aria-label="next">next</a></button>
+            </div>
+        </form>
+    </body>
+</html>
