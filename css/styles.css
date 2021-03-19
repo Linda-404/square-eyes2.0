@@ -449,7 +449,7 @@ footer {
 
 @media screen and (max-width: 700px) {
     h1 {
-        font-size: 1em;
+        font-size: 1.1em;
     }
     h2 {
         font-size: 1em;
@@ -484,6 +484,9 @@ footer {
     nav {
         justify-content: center;
     }
+    .nav-item, .current {
+        font-size: 1em;
+    }
     /* main style */
     .main-teaser {
         max-width: 20em;
@@ -514,6 +517,9 @@ footer {
     .account-wrapper {
         display: flex;
         flex-direction: column;
+    }
+    .footer-item {
+        font-size: 0.875em;
     }
     .programmer {
         width: 20em;
