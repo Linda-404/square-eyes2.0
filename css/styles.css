@@ -4,7 +4,7 @@
 
 /*--fontstyle--*/
 
-h1, h2, nav {
+h1, h2, nav, a {
     font-family: 'Oswald', sans-serif;
 }
 h3, h4, h5, p {
@@ -13,16 +13,16 @@ h3, h4, h5, p {
 h1 {
     font-size: 1.25em;
 }
-h2 {
+/* h2 {
     font-size: 1.125em;
-}
-h3 {
+} */
+h2, h3, a {
     font-size: 1em;
 }
 h4, p {
     font-size: 0.875em;
 }
-h1, h2, h3, h4, h5, nav, p::first-letter {
+h1, h2, h3, h4, h5, nav, a, p::first-letter {
     text-transform: capitalize;
 }
 
@@ -164,8 +164,9 @@ nav {
     align-items: center;
 }
 .title2 {
+    /* font-size: 1.125em; */
     color: #FDFCE2;
-    margin: 30px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,7 +361,10 @@ footer {
 .user {
     padding: 20px;
 }
-
+.memes {
+    display: flex;
+    justify-content: center;
+}
 .programmer {
     width: 40em;
 }
@@ -439,6 +443,9 @@ footer {
     h4, p {
         font-size: 0.75em;
     }
+    .title{
+        margin: 40px;
+    }
     .fp-title {
         font-size: 16px;
     }
@@ -490,6 +497,9 @@ footer {
     .account-wrapper {
         display: flex;
         flex-direction: column;
+    }
+    .programmer {
+        width: 20em;
     }
 
 }
