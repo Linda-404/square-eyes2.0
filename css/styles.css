@@ -36,6 +36,10 @@ body {
     background-color: #25201f;
     margin: 0;
 }
+a {
+    text-decoration: none;
+    color: #F2B705;
+}
 .header-home {
     background-image: url(../images/pictures/curtain.jpg);
     height: 100vh;
@@ -111,6 +115,9 @@ label {
     border-radius: 6px;
     padding: 5px 15px;
 }
+.btntext {
+    color: #25201f;
+}
 .btn:hover {
     cursor: pointer;
 }
@@ -130,10 +137,7 @@ label {
 }
 
 /* nav */
-a {
-    text-decoration: none;
-    color: #F2B705;
-}
+
 
 nav {
     display: flex;
