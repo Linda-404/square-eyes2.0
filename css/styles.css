@@ -15,10 +15,10 @@
 }
 /*--fontstyle--*/
 
-h1, h2, nav, a {
+h1 {
     font-family: 'Oswald', sans-serif;
 }
-h3, h4, h5, p {
+h2, h3, h4, h5, p, a, nav {
     font-family: 'Lato', sans-serif;
 }
 h1 {
@@ -28,7 +28,7 @@ h1 {
     font-size: 1.125em;
 } */
 h2, h3, a {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 h4, p {
     font-size: 0.875em;
@@ -50,6 +50,7 @@ body {
 a {
     text-decoration: none;
     color: #F2B705;
+    font-weight: bolder;
 }
 .header-home {
     background-image: url(../images/pictures/curtain.jpg);
