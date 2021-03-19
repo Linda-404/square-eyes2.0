@@ -1,7 +1,18 @@
 * {
     box-sizing: border-box;
 }
-
+:root {
+    --black: #000;
+    --blackish: #110A06;
+    --brownish: #25201f;
+    --black-brown: #261A13;
+    --grey-yellow: #795C03;
+    --dark-yellow: #F2B705;
+    --orange-yellow: #FFA200;
+    /* --light-yellow: #F2DA51;
+    --corn: cornsilk;
+    --white: #fff; */
+}
 /*--fontstyle--*/
 
 h1, h2, nav, a {
@@ -110,7 +121,7 @@ label {
 }
 
 .btn {
-    background-color: #F2B705;
+    background-image: linear-gradient(var(--dark-yellow), var(--grey-yellow));
     margin: 10px;
     border-radius: 6px;
     padding: 5px 15px;
@@ -122,7 +133,7 @@ label {
     cursor: pointer;
 }
 .big-btn {
-    background-color: #FFA200;
+    background-image: linear-gradient(var(--orange-yellow), var(--grey-yellow));
     margin: 20px;
     border-radius: 6px;
     padding: 15px 60px;
