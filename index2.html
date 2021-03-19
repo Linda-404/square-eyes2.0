@@ -15,7 +15,7 @@
             <div>
                 <a href="index.html"><img src="images/logo_square-eyes1.png" alt="square eyes logo" class="logo2"></a>
             </div>
-            <label for="hamburgermenu"><i class="fas fa-bars"></i></label>
+            <label for="hamburgermenu" tabindex="0" class="hamburgermenu"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="hamburgermenu">
             <section class="hamburgernav">            
             <div class="searchbox">
@@ -42,7 +42,7 @@
             </section>
 
             <section class="main-teaser">
-                <a href="newreleases.html"><h2 class="title2">new releases</h2></a>
+                <a href="newreleases.html"><h2 class="title2" aria-label="new releases">new releases</h2></a>
                 <div class="scrolling-wrapper">
                     <div class="filminfo">
                         <a href="filmdetails.html"><img src="images/films_topnew/new_drama-firestarter.jpg" alt="man standing infront of a raging fire" class="film-img"></a>
@@ -137,7 +137,7 @@
             </section>
 
             <section class="main-teaser">
-                <a href="topratings.html"><h2 class="title2">top ratings</h2></a>
+                <a href="topratings.html"><h2 class="title2" aria-label="top ratings">top ratings</h2></a>
                 <div class="scrolling-wrapper">
                     <div class="filminfo">
                         <a href="filmdetails.html"><img src="images/films_topnew/top_drama_memories.jpg" alt="a young girl and boy laughing and playing in countryside" class="film-img"></a>
@@ -237,13 +237,15 @@
                 <a href="about.html" class="footer-item">about us</a>
                 <a href="contact.html" class="footer-item">contact</a>
                 <a href="terms.html" class="footer-item">terms and conditions</a>
-                <a href="faq.html" class="footer-item">faq</a>
+                <a href="faq.html" class="footer-item">FAQ</a>
                 <div>
-                    <a href="social.html" class="footer-item"><i class="fab fa-facebook"></i></a>
-                    <a href="social.html" class="footer-item"><i class="fab fa-instagram"></i></a>
-                    <a href="social.html" class="footer-item"><i class="fab fa-twitter"></i></a>
+                    <a href="social.html" class="footer-item" aria-label="facebook icon"><i class="fab fa-facebook"></i></a>
+                    <a href="social.html" class="footer-item" aria-label="instagram icon"><i class="fab fa-instagram"></i></a>
+                    <a href="social.html" class="footer-item" aria-label="twitter icon"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
