@@ -113,11 +113,12 @@ label {
 .search {
     border: none;
     min-width: 300px;
+    border-radius: 6px 0px 0px 6px;
     padding: 5px;
 }
 .search-btn {
-    background-color: #F2B705;
-    border-radius: 6px;
+    background-image: linear-gradient(var(--dark-yellow), var(--orange-yellow), var(--grey-yellow));
+    border-radius: 0px 6px 6px 0px;
     padding: 5px 15px;
 }
 
