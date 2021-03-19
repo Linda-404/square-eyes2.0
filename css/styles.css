@@ -519,6 +519,22 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    .filmpage {
+        width: 40em;
+    }
+    .film {
+        width: 25em;
+    }
+    .filmpage-content {
+        width: 35em;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+    .plot {
+        width: 10em;
+    }
     .footer-item {
         font-size: 0.875em;
     }
