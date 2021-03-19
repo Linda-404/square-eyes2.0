@@ -158,6 +158,7 @@ nav {
 }
 .nav-item, .current {
     color: #FDFCE2;
+    font-size: 1em;
     padding-right: 30px;
 }
 .current {
