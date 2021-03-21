@@ -14,7 +14,7 @@ const emailError = document.querySelector("#email_error");
 
 
 
-function validateForm(event) {
+function validateFirstName(event) {
     event.preventDefault();
     if (checkLength(firstName.value, 1) === true) {
         firstNameError.style.display = "none";
@@ -36,7 +36,7 @@ function validateForm(event) {
     // }
 }
 
-function validateForm2(event) {
+function validateLastName(event) {
     event.preventDefault();
     if (checkLength(lastName.value, 1) === true) {
         lastNameError.style.display = "none";
@@ -45,7 +45,7 @@ function validateForm2(event) {
         lastNameError.style.display = "block";
     }
 }
-function validateForm3(event) {
+function validateEmailField(event) {
     event.preventDefault();
     if (validateEmail(email.value) === true) {
         emailError.style.display = "none";
@@ -63,10 +63,15 @@ function validateForm3(event) {
 //         passwordError.style.display = "block";
 //     }
 // }
-
-firstName.addEventListener("blur", validateForm);
-lastName.addEventListener("blur", validateForm2);
-email.addEventListener("blur", validateForm3);
+if (firstName){
+    firstName.addEventListener("blur", validateFirstName);
+}
+if (lastName){
+    lastName.addEventListener("blur", validateLastName);
+}
+if (email){
+    email.addEventListener("blur", validateEmailField);
+}
 // password.addEventListener("submit", validateForm4);
 
 // signUp.addEventListener("submit", validateForm);

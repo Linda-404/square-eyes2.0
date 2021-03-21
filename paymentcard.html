@@ -11,7 +11,7 @@
     <body class="type">
         <div class="blur"></div>
 
-        <form action="/payment" method="POST">
+        <form action="/payment" method="POST" class="paymentcard">
             <div class="exit">
                 <a href="filmdetailsloggedin.html" aria-label="exit" class="exit"><i class="fas fa-times"></i></a>
             </div>
@@ -24,22 +24,28 @@
                 <label for="creditcard_number">creditcard number</label>
                 <input type="text" id="creditcard_number" name="creditcard_number" placeholder="1234 5678 9101 1121" class="form-input">
                 <i class="fab fa-cc-visa"></i>
+                <div class="form_error" id="creditcard_error">Your card number need to be 17 characters</div>
             </div>
             <div class="form-fillout">
                 <label for="name_cardholder">name cardholder</label>
                 <input type="text" name="name_cardholder" id="name_cardholder" placeholder="firstname surname" class="form-input">
+                <div class="form_error" id="cardholder_error">Please enter name of cardholder</div>
             </div>
             <div class="form-fillout">
                 <label for="expire_date">expire date</label>
                 <input type="month" name="expire_date" id="expire_date" placeholder="YYYY/MM" class="form-input">
+                <div class="form_error" id="expire_error">Enter year and month of expire (YYYY/MM)</div>
             </div>
             <div class="form-fillout">
                 <label for="cvv">cvv</label>
                 <input type="number" name="cvv" id="cvv" placeholder="cvv" class="form-input">
+                <div class="form_error" id="cvv_error">Please enter your CVV</div>
             </div>
             <div class="container">
                 <button class="btn"><a href="paymentsum.html" aria-label="next">next</a></button>
             </div>
         </form>
+
+        <script src="js/payment.js"></script>
     </body>
 </html>
