@@ -5,6 +5,7 @@
     --black: #000;
     --blackish: #110A06;
     --brownish: #25201f;
+    --black-grey: #2A2220;
     --black-brown: #261A13;
     --grey-yellow: #795C03;
     --dark-yellow: #F2B705;
@@ -44,7 +45,7 @@ h1, h2, h3, h4, h5, nav, a, p::first-letter {
 body {
     /* background-color: #3E3532; */
     /* background-color: #3E3532; */
-    background-color: #25201f;
+    background-color: var(--black-grey);
     margin: 0;
 }
 a {
