@@ -10,7 +10,7 @@ const cvvError = document.querySelector("#cvv_error");
 
 function validateCardNumber(event) {
     event.preventDefault();
-    if (checkLength(creditCardNumber.value, 17) === true) {
+    if (creditCardNumber.value.trim().length === 17) {
         creditCardNumberError.style.display = "none";
     }
     else {
