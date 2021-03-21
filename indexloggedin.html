@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>top ratings | square eyes</title>        
-        <meta name="description" content="search independent films by top ratings">
+        <title>home | square eyes</title>
+        <meta name="description" content="video streaming website for independent producers">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/85b41cf053.js" crossorigin="anonymous"></script>
         <link href="css/styles.css" rel="stylesheet">
     </head>
@@ -14,7 +15,7 @@
             <div>
                 <a href="index.html"><img src="images/logo_square-eyes1.png" alt="square eyes logo" class="logo2"></a>
             </div>
-            <label for="hamburgermenu"><i class="fas fa-bars"></i></label>
+            <label for="hamburgermenu" tabindex="0" class="hamburgermenu"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="hamburgermenu">
             <section class="hamburgernav">            
             <div class="searchbox">
@@ -22,41 +23,31 @@
                 <button class="search-btn" type="submit" aria-label="search"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-btns2">
-                <!-- <a href="vieweraccount.html" aria-label="viewer account" class="usericon2"><i class="far fa-user-circle user-icon usericon"></i></a> -->
-                <button class="btn btn2"><a href="index.html" class="btntext">log in</a></button>
+                <a href="vieweraccount.html" aria-label="viewer account" class="usericon2"><i class="far fa-user-circle user-icon usericon"></i></a>
+                <button class="btn btn2"><a href="index.html" class="btntext">log out</a></button>
             </div>
             </section>
         </header>
-
+        
         <nav>
             <a href="newreleases.html" class="nav-item">new releases</a>
-            <div class="current">top ratings</div>
+            <a href="topratings.html" class="nav-item">top ratings</a>
             <a href="genres.html" class="nav-item">genres</a>
         </nav>
 
         <main class="fp-main">
-            <!-- <h1 class="title">top ratings</h1> -->
+            <section class="title">
+                <h1 class="fp-title">high quality independent shortfilms</h1>
+                <h1 class="fp-title">pay per view streaming site</h1>
+            </section>
+
             <section class="main-teaser">
-                <!-- <h2 class="title">action</h2> -->
-                <div class="film-wrapper">
+                <a href="newreleases.html"><h2 class="title2" aria-label="new releases">new releases</h2></a>
+                <div class="scrolling-wrapper">
                     <div class="filminfo">
-                        <a href="filmdetails.html"><img src="images/films_topnew/top_drama_memories.jpg" alt="a young girl and boy laughing and playing in countryside" class="film-img"></a>
+                        <a href="filmdetails.html"><img src="images/films_topnew/new_drama-firestarter.jpg" alt="man standing infront of a raging fire" class="film-img"></a>
                         <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
-                            <div class="ratings">
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filminfo">
-                        <div><img src="images/films_topnew/top_action_maskman.jpg" alt="man with white mask standing infront of a car" class="film-img"></div>
-                        <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
+                            <h4 class="filmtext">filmtitle</h4>
                             <div class="ratings">
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -68,23 +59,9 @@
                         </div>
                     </div>
                     <div class="filminfo">
-                        <div><img src="images/films_topnew/top_horror_sumiko.jpg" alt="a asian woman standing with head down in a neonlight lighted hallway" class="film-img"></div>
+                        <img src="images/films_topnew/new_comedy_bananaboys.jpg" alt="a group of guys in bananasuits sitting in a van" class="film-img">
                         <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
-                            <div class="ratings">
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filminfo" >
-                        <div><img src="images/films_topnew/top_drama_drowninglove.jpg" alt="two women under water, one hugging the other from behind" class="film-img"></div>
-                        <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
+                            <h4 class="filmtext">filmtitle</h4>
                             <div class="ratings">
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -96,9 +73,9 @@
                         </div>
                     </div>
                     <div class="filminfo">
-                        <div><img src="images/films_topnew/top_horror_bloodthirst.jpg" alt="woman with black eyes and blood running down her neck" class="film-img"></div>
+                        <img src="images/films_topnew/new_comedy_horseplay.jpg" alt="two men with horsemasks play the accordion" class="film-img">
                         <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
+                            <h4 class="filmtext">filmtitle</h4>
                             <div class="ratings">
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -110,9 +87,9 @@
                         </div>
                     </div>
                     <div class="filminfo">
-                        <div><img src="images/films_topnew/top_comedy_jackassrace.jpg" alt="two men races with a motorcycle with fire in background" class="film-img"></div>
+                        <img src="images/films_topnew/new_comedy_nostupid.jpg" alt="a neon sign that says no stupid people beyond this point" class="film-img">
                         <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
+                            <h4 class="filmtext">filmtitle</h4>
                             <div class="ratings">
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -124,9 +101,9 @@
                         </div>
                     </div>
                     <div class="filminfo">
-                        <a href="filmdetails.html"><img src="images/films_topnew/top_drama_memories.jpg" alt="a young girl and boy laughing and playing in countryside" class="film-img"></a>
+                        <img src="images/films_topnew/new_horror_deadrevenge.jpg" alt="only two dirty hands visible climbing up a hill" class="film-img">
                         <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
+                            <h4 class="filmtext">filmtitle</h4>
                             <div class="ratings">
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -138,9 +115,9 @@
                         </div>
                     </div>
                     <div class="filminfo">
-                        <div><img src="images/films_topnew/top_action_maskman.jpg" alt="man with white mask standing infront of a car" class="film-img"></div>
+                        <img src="images/films_topnew/new_action_runner.jpg" alt="two men racing up stairs" class="film-img">
                         <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
+                            <h4 class="filmtext">filmtitle</h4>
                             <div class="ratings">
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -151,64 +128,108 @@
                             </div>
                         </div>
                     </div>
-                    <div class="filminfo">
-                        <div><img src="images/films_topnew/top_horror_sumiko.jpg" alt="a asian woman standing with head down in a neonlight lighted hallway" class="film-img"></div>
-                        <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
-                            <div class="ratings">
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filminfo" >
-                        <div><img src="images/films_topnew/top_drama_drowninglove.jpg" alt="two women under water, one hugging the other from behind" class="film-img"></div>
-                        <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
-                            <div class="ratings">
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filminfo">
-                        <div><img src="images/films_topnew/top_horror_bloodthirst.jpg" alt="woman with black eyes and blood running down her neck" class="film-img"></div>
-                        <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
-                            <div class="ratings">
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filminfo">
-                        <div><img src="images/films_topnew/top_comedy_jackassrace.jpg" alt="two men races with a motorcycle with fire in background" class="film-img"></div>
-                        <div class="filmtitle">
-                            <div class="filmtext">filmtitle</div>
-                            <div class="ratings">
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="newreleases.html" class="dots">
+                        <div class="dot"><i class="fas fa-circle"></i></div>
+                        <div class="dot"><i class="fas fa-circle"></i></div>
+                        <div class="dot"><i class="fas fa-circle"></i></div>
+                    </a>
                 </div>
             </section>
+
+            <section class="main-teaser">
+                <a href="topratings.html"><h2 class="title2" aria-label="top ratings">top ratings</h2></a>
+                <div class="scrolling-wrapper">
+                    <div class="filminfo">
+                        <a href="filmdetails.html"><img src="images/films_topnew/top_drama_memories.jpg" alt="a young girl and boy laughing and playing in countryside" class="film-img"></a>
+                        <div class="filmtitle">
+                            <h4 class="filmtext">filmtitle</h4>
+                            <div class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filminfo">
+                        <div><img src="images/films_topnew/top_action_maskman.jpg" alt="man with white mask standing infront of a car" class="film-img"></div>
+                        <div class="filmtitle">
+                            <h4 class="filmtext">filmtitle</h4>
+                            <div class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filminfo">
+                        <div><img src="images/films_topnew/top_horror_sumiko.jpg" alt="a asian woman standing with head down in a neonlight lighted hallway" class="film-img"></div>
+                        <div class="filmtitle">
+                            <h4 class="filmtext">filmtitle</h4>
+                            <div class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filminfo" >
+                        <div><img src="images/films_topnew/top_drama_drowninglove.jpg" alt="two women under water, one hugging the other from behind" class="film-img"></div>
+                        <div class="filmtitle">
+                            <h4 class="filmtext">filmtitle</h4>
+                            <div class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filminfo">
+                        <div><img src="images/films_topnew/top_horror_bloodthirst.jpg" alt="woman with black eyes and blood running down her neck" class="film-img"></div>
+                        <div class="filmtitle">
+                            <h4 class="filmtext">filmtitle</h4>
+                            <div class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filminfo">
+                        <div><img src="images/films_topnew/top_comedy_jackassrace.jpg" alt="two men races with a motorcycle with fire in background" class="film-img"></div>
+                        <div class="filmtitle">
+                            <h4 class="filmtext">filmtitle</h4>
+                            <div class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="topratings.html" class="dots">
+                        <div class="dot"><i class="fas fa-circle"></i></div>
+                        <div class="dot"><i class="fas fa-circle"></i></div>
+                        <div class="dot"><i class="fas fa-circle"></i></div>
+                    </a>
+                </div>
+            </section>   
         </main>
 
         <footer>
@@ -224,5 +245,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
