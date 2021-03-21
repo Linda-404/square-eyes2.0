@@ -43,8 +43,6 @@ h1, h2, h3, h4, h5, nav, a, p::first-letter {
 
 /* header */
 body {
-    /* background-color: #3E3532; */
-    /* background-color: #3E3532; */
     background-color: var(--black-grey);
     margin: 0;
 }
@@ -282,38 +280,6 @@ footer {
     margin: 10px;
 }
 
-/* viewer account */
-
-/* .user-info {
-    background-color: #110A06;
-    display: flex;
-    justify-content: center;
-    width: 70em;
-} */
-
-
-/* .fp-main {
-    width: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-/* .filminfo {
-    background-color: #3E3532;
-} */
-/* .filmtitle {
-    color: #FDFCE2; 
-}
-.dots {
-    color: #FDFCE2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5em;
-}
-.dot {
-    margin: 5px;
-} */
 .filminfo {
     margin: 1em;
 }
