@@ -2,7 +2,7 @@ const filmContainer = document.querySelector(".film-wrapper");
 const topRatingsContainer = document.querySelector(".top_genre");
 const popularContainer = document.querySelector(".pop_genre");
 
-const url = "http://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
+const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
 async function fetchByGenre() {
     try {

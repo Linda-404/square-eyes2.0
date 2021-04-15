@@ -2,7 +2,7 @@
 const newsContainer = document.querySelector(".news");
 const topRatingsContainer = document.querySelector(".top");
 
-const url = "http://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
+const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
 
 async function fetchByTag() {

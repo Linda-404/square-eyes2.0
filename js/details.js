@@ -10,7 +10,7 @@ console.log(params);
 console.log(id);
 
 // const url = "http://squareeyesheadless.local/wp-json/wc/store/products/" + id;
-const url = "http://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/" + id;
+const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/" + id;
 
 
 async function getFilm() {

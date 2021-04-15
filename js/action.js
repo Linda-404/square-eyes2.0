@@ -4,7 +4,7 @@ const popularContainer = document.querySelector(".pop_genre");
 const mainContainer = document.querySelector(".main-teaser")
 const loadingContainer = document.querySelector(".loading-container")
 // const url = "http://squareeyesheadless.local/wp-json/wc/store/products/";
-const url = "http://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
+const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
 async function fetchFilms() {
     try {

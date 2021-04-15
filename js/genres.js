@@ -3,7 +3,7 @@ const comedyContainer = document.querySelector(".comedy_container");
 const dramaContainer = document.querySelector(".drama_container");
 const horrorContainer = document.querySelector(".horror_container");
 
-const url = "http://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
+const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
 async function fetchByGenreAction() {
     try {

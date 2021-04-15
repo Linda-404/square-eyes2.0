@@ -1,6 +1,6 @@
 const teaserContainer = document.querySelector(".pop_teaser");
 // const url = "http://squareeyesheadless.local/wp-json/wc/store/products/";
-const url = "http://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
+const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
 async function fetchPopularFilms() {
     
