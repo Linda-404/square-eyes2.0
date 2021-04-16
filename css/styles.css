@@ -290,7 +290,7 @@ footer {
     margin-right: 10px;
     border-radius: 6px;
 }
-.film-wrapper {
+.film-wrapper, .film-wrapper2 {
     max-width: 70em;
     display: flex;
     flex-wrap: wrap;

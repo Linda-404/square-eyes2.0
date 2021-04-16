@@ -9,6 +9,7 @@ async function fetchPopularFilms() {
         const results = await response.json();
 
         console.log(results);
+        teaserContainer.innerHTML = "";
        
 
         for (let i = 0; i < results.length; i++) {
@@ -17,6 +18,7 @@ async function fetchPopularFilms() {
             teaserContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
                                             <img src="${results[i].images[0].src}" class="genre-all">
                                             <h4>${results[i].name}</h4>
+                                            <p>Genre: ${results[i].categories[0].name}</p>
                                             <div class="ratings">
                                                 <i class="far fa-star"></i>
                                                 <i class="far fa-star"></i>

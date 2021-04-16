@@ -1,4 +1,3 @@
-// const filmContainer = document.querySelector(".film-wrapper, .scrolling-wrapper");
 const newsContainer = document.querySelector(".news");
 const topRatingsContainer = document.querySelector(".top");
 

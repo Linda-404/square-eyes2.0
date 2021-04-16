@@ -16,7 +16,7 @@ async function fetchByGenreAction() {
             console.log(results[i]);
 
             actionContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="film-img">
+                                            <img src="${results[i].images[0].src}" class="genre-all">
                                             <h4>${results[i].name}</h4>
                                             <div class="ratings">
                                                 <i class="far fa-star"></i>
@@ -48,7 +48,7 @@ async function fetchByGenreComedy() {
             console.log(results[i]);
 
             comedyContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="film-img">
+                                            <img src="${results[i].images[0].src}" class="genre-all">
                                             <h4>${results[i].name}</h4>
                                             <div class="ratings">
                                                 <i class="far fa-star"></i>
@@ -80,7 +80,7 @@ async function fetchByGenreDrama() {
             console.log(results[i]);
 
             dramaContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="film-img">
+                                            <img src="${results[i].images[0].src}" class="genre-all">
                                             <h4>${results[i].name}</h4>
                                             <div class="ratings">
                                                 <i class="far fa-star"></i>
@@ -112,7 +112,7 @@ async function fetchByGenreHorror() {
             console.log(results[i]);
 
             horrorContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="film-img">
+                                            <img src="${results[i].images[0].src}" class="genre-all">
                                             <h4>${results[i].name}</h4>
                                             <div class="ratings">
                                                 <i class="far fa-star"></i>
