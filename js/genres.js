@@ -7,6 +7,9 @@ const actionContainer2 = document.querySelector(".action_container2");
 const comedyContainer2 = document.querySelector(".comedy_container2");
 const dramaContainer2 = document.querySelector(".drama_container2");
 const horrorContainer2 = document.querySelector(".horror_container2");
+var response;
+var data = "";
+var html = "";
 
 const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
