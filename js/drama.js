@@ -1,10 +1,10 @@
-const genreId = 18;
+// const genreId = 18;
 
-fetchByGenre(genreId);
+// fetchByGenre(genreId);
 
-fetchByGenreAndRating(genreId, 5);
+// fetchByGenreAndRating(genreId, 5);
 
-fetchByGenreAndTag(genreId, 21);
+// fetchByGenreAndTag(genreId, 21);
 
 // functions logged in
 

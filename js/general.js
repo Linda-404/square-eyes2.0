@@ -6,6 +6,27 @@ const filmContainer2 = document.querySelector(".film-wrapper2");
 const topRatingsContainer2 = document.querySelector(".top_genre2");
 const popularContainer2 = document.querySelector(".pop_genre2");
 
+const path = window.location.pathname;
+const loggedin = checkLoginStatus(path);
+let loggedindex = path.indexOf('loggedin');
+let pageGenre = "";
+if (loggedindex === -1) {
+
+    pageGenre = path.substr(1, path.indexOf(".html") - 1);
+}
+else {
+    pageGenre = path.substr(1, loggedindex -1); 
+}
+let genreIds = {
+    "action": 16,
+    "comedy": 17,
+    "drama": 18,
+    "horror": 19
+};
+const genreId = genreIds[pageGenre];
+console.log(pageGenre);
+console.log(genreId);
+
 const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
 async function fetchByGenre(genre) {
@@ -14,18 +35,28 @@ async function fetchByGenre(genre) {
         const results = await response.json();
 
         console.log(results);
-        
-        filmContainer.innerHTML = "";
-        genreContainer(results, filmContainer);
-    
-        filmContainer2.innerHTML = "";
-        genreContainer(results, filmContainer2);     
+        if (!loggedin){
+            filmContainer.innerHTML = "";
+            genreContainer(results, filmContainer);
+        }
+        else {            
+            filmContainer2.innerHTML = "";
+            genreContainer(results, filmContainer2);     
+        }
         
 
     }
     catch (error) {
         console.log(error);
     }
+}
+fetchByGenre(genreId);
+
+function checkLoginStatus(path, loggedin) {
+    if (path.includes("loggedin")) {
+        loggedin = true;
+    }
+    return loggedin;
 }
 
 function genreContainer(results, container) {
@@ -55,12 +86,14 @@ async function fetchByGenreAndRating(genre, rating) {
         const results = await response.json();
 
         console.log(results);
-
-        topRatingsContainer.innerHTML = "";
-        genreRatingContainer(results, topRatingsContainer);
-
-        topRatingsContainer2.innerHTML = "";
-        genreRatingContainer(results, topRatingsContainer2);
+        if (!loggedin) {
+            topRatingsContainer.innerHTML = "";
+            genreRatingContainer(results, topRatingsContainer);
+        }
+        else {
+            topRatingsContainer2.innerHTML = "";
+            genreRatingContainer(results, topRatingsContainer2);
+        }
         
 
     }
@@ -68,6 +101,7 @@ async function fetchByGenreAndRating(genre, rating) {
         console.log(error);
     }
 }
+fetchByGenreAndRating(genreId, 5);
 
 function genreRatingContainer(results, container) {
     for (let i = 0; i < results.length; i++) {
@@ -94,17 +128,21 @@ async function fetchByGenreAndTag(genre, tag) {
         const results = await response.json();
 
         console.log(results);
-        popularContainer.innerHTML = "";
-        genreTagContainer(results, popularContainer);
-
-        popularContainer2.innerHTML = "";
-        genreTagContainer(results, popularContainer2);
+        if (!loggedin) {
+            popularContainer.innerHTML = "";
+            genreTagContainer(results, popularContainer);
+        }
+        else {
+            popularContainer2.innerHTML = "";
+            genreTagContainer(results, popularContainer2);
+        }
 
     }
     catch (error) {
         console.log(error);
     }
 }
+fetchByGenreAndTag(genreId, 21);
 
 function genreTagContainer(results, container) {
     for (let i = 0; i < results.length; i++) {
