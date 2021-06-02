@@ -49,7 +49,6 @@ async function fetchByGenre(genre) {
             genreContainer(results, filmContainer2);     
         }
         
-
     }
     catch (error) {
         console.log(error);
