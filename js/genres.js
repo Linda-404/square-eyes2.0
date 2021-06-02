@@ -7,35 +7,37 @@ const actionContainer2 = document.querySelector(".action_container2");
 const comedyContainer2 = document.querySelector(".comedy_container2");
 const dramaContainer2 = document.querySelector(".drama_container2");
 const horrorContainer2 = document.querySelector(".horror_container2");
-var response;
-var data = "";
-var html = "";
+// var response;
+// var data = "";
+// var html = "";
+const genreIds = {
+    "action": 16,
+    "comedy": 17,
+    "drama": 18,
+    "horror": 19
+};
+
 
 const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
 
-async function fetchByGenreAction() {
+const path = window.location.pathname;
+const loggedin = checkLoginStatus(path);
+
+function checkLoginStatus(path, loggedin) {
+    if (path.includes("loggedin")) {
+        loggedin = true;
+    }
+    return loggedin;
+}
+
+async function fetchByGenre(genre, container) {
     try {
-        const response = await fetch(url + "?category=16");
+        const response = await fetch(url + "?category=" + genre);
         const results = await response.json();
 
         console.log(results);
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
-
-            actionContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+        genresContainer(results, container);
 
     }
     catch (error) {
@@ -43,228 +45,171 @@ async function fetchByGenreAction() {
     }
 }
 
-fetchByGenreAction();
+if (!loggedin) {
+    fetchByGenre(genreIds["action"], actionContainer);
+    fetchByGenre(genreIds["comedy"], comedyContainer);
+    fetchByGenre(genreIds["drama"], dramaContainer);
+    fetchByGenre(genreIds["horror"], horrorContainer);
+}
+else {
+    fetchByGenre(genreIds["action"], actionContainer2);
+    fetchByGenre(genreIds["comedy"], comedyContainer2);
+    fetchByGenre(genreIds["drama"], dramaContainer2);
+    fetchByGenre(genreIds["horror"], horrorContainer2);
+}
 
-async function fetchByGenreComedy() {
-    try {
-        const response = await fetch(url + "?category=17");
-        const results = await response.json();
+function genresContainer(results, container) {
+    for (let i = 0; i < results.length; i++) {
+        console.log(results[i]);
 
-        console.log(results);
-
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
-
-            comedyContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
-
-    }
-    catch (error) {
-        console.log(error);
+        container.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
+                                        <img src="${results[i].images[0].src}" class="genre-all">
+                                        <h4>${results[i].name}</h4>
+                                        <div class="ratings">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </a>`;
     }
 }
 
-fetchByGenreComedy();
 
-async function fetchByGenreDrama() {
-    try {
-        const response = await fetch(url + "?category=18");
-        const results = await response.json();
 
-        console.log(results);
+// async function fetchByGenreAction2() {
+//     try {
+//         const response = await fetch(url + "?category=16");
+//         const results = await response.json();
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+//         console.log(results);
 
-            dramaContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+//         genresContainer(results, actionContainer2);
 
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
-fetchByGenreDrama();
+// fetchByGenreAction2();
 
-async function fetchByGenreHorror() {
-    try {
-        const response = await fetch(url + "?category=19");
-        const results = await response.json();
+// async function fetchByGenreComedy2() {
+//     try {
+//         const response = await fetch(url + "?category=17");
+//         const results = await response.json();
 
-        console.log(results);
+//         console.log(results);
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+//         genresContainer(results, comedyContainer2);
 
-            horrorContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// fetchByGenreComedy2();
+
+// async function fetchByGenreDrama2() {
+//     try {
+//         const response = await fetch(url + "?category=18");
+//         const results = await response.json();
+
+//         console.log(results);
+
+//         genresContainer(results, dramaContainer2);
+
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// fetchByGenreDrama2();
+
+// async function fetchByGenreHorror2() {
+//     try {
+//         const response = await fetch(url + "?category=19");
+//         const results = await response.json();
+
+//         console.log(results);
+
+//         genresContainer(results, horrorContainer2);
        
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
-fetchByGenreHorror();
+// fetchByGenreHorror2();
 
-async function fetchByGenreAction2() {
-    try {
-        const response = await fetch(url + "?category=16");
-        const results = await response.json();
 
-        console.log(results);
+// async function fetchByGenreAction() {
+//     try {
+//         const response = await fetch(url + "?category=16");
+//         const results = await response.json();
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+//         console.log(results);
 
-            actionContainer2.innerHTML += `<a href="filmdetailsloggedin.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+//         genresContainer(results, actionContainer);
 
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
-fetchByGenreAction2();
+// fetchByGenreAction();
 
-async function fetchByGenreComedy2() {
-    try {
-        const response = await fetch(url + "?category=17");
-        const results = await response.json();
+// async function fetchByGenreComedy() {
+//     try {
+//         const response = await fetch(url + "?category=17");
+//         const results = await response.json();
 
-        console.log(results);
+//         console.log(results);
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+//         genresContainer(results, comedyContainer);
 
-            comedyContainer2.innerHTML += `<a href="filmdetailsloggedin.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+// fetchByGenreComedy();
 
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+// async function fetchByGenreDrama() {
+//     try {
+//         const response = await fetch(url + "?category=18");
+//         const results = await response.json();
 
-fetchByGenreComedy2();
+//         console.log(results);
 
-async function fetchByGenreDrama2() {
-    try {
-        const response = await fetch(url + "?category=18");
-        const results = await response.json();
+//         genresContainer(results, dramaContainer);
 
-        console.log(results);
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+// fetchByGenreDrama();
 
-            dramaContainer2.innerHTML += `<a href="filmdetailsloggedin.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+// async function fetchByGenreHorror() {
+//     try {
+//         const response = await fetch(url + "?category=19");
+//         const results = await response.json();
 
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+//         console.log(results);
 
-fetchByGenreDrama2();
-
-async function fetchByGenreHorror2() {
-    try {
-        const response = await fetch(url + "?category=19");
-        const results = await response.json();
-
-        console.log(results);
-
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
-
-            horrorContainer2.innerHTML += `<a href="filmdetailsloggedin.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+//         genresContainer(results, horrorContainer);
        
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
-fetchByGenreHorror2();
+// fetchByGenreHorror();

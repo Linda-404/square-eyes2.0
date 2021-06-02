@@ -6,28 +6,33 @@ const filmContainer2 = document.querySelector(".film-wrapper2");
 const topRatingsContainer2 = document.querySelector(".top_genre2");
 const popularContainer2 = document.querySelector(".pop_genre2");
 
-const path = window.location.pathname;
-const loggedin = checkLoginStatus(path);
-let loggedindex = path.indexOf('loggedin');
-let pageGenre = "";
-if (loggedindex === -1) {
-
-    pageGenre = path.substr(1, path.indexOf(".html") - 1);
-}
-else {
-    pageGenre = path.substr(1, loggedindex -1); 
-}
-let genreIds = {
+const genreIds = {
     "action": 16,
     "comedy": 17,
     "drama": 18,
     "horror": 19
 };
-const genreId = genreIds[pageGenre];
-console.log(pageGenre);
+const path = window.location.pathname;
+const loggedin = checkLoginStatus(path);
+const genreId = getGenreId();
 console.log(genreId);
 
 const url = "https://ellesdevdesigns.com/square-eyes/wp-json/wc/store/products/";
+
+function getGenreId() {
+    const loggedindex = path.indexOf('loggedin');
+    let pageGenre = "";
+    if (loggedindex === -1) {
+
+        pageGenre = path.substr(1, path.indexOf(".html") - 1);
+    }
+    else {
+        pageGenre = path.substr(1, loggedindex - 1);
+    }
+    
+    const genreId = genreIds[pageGenre];
+    return genreId;
+}
 
 async function fetchByGenre(genre) {
     try {
@@ -142,6 +147,7 @@ async function fetchByGenreAndTag(genre, tag) {
         console.log(error);
     }
 }
+
 fetchByGenreAndTag(genreId, 21);
 
 function genreTagContainer(results, container) {
