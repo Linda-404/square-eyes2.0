@@ -8,8 +8,8 @@ fetchByGenreAndTag(genreId, 21);
 
 // functions logged in
 
-fetchByGenre2(genreId);
+// fetchByGenre2(genreId);
 
-fetchByGenreAndRating2(genreId, 5);
+// fetchByGenreAndRating2(genreId, 5);
 
 fetchByGenreAndTag2(genreId, 21);

@@ -14,12 +14,25 @@ async function fetchByGenre(genre) {
         const results = await response.json();
 
         console.log(results);
+        
         filmContainer.innerHTML = "";
+        genreContainer(results, filmcontainer);
+    
+        filmContainer2.innerHTML = "";
+        genreContainer(results, filmcontainer2);     
+        
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
-            
-            filmContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+function genreContainer(results, container) {
+    for (let i = 0; i < results.length; i++) {
+        console.log(results[i]);
+
+        container.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
                                             <img src="${results[i].images[0].src}" class="film-img">
                                             <h4>${results[i].name}</h4>
                                             <div class="ratings">
@@ -31,12 +44,7 @@ async function fetchByGenre(genre) {
                                                 <i class="far fa-star"></i>
                                             </div>
                                         </a>`;
-           
-        }
 
-    }
-    catch (error) {
-        console.log(error);
     }
 }
 
@@ -47,29 +55,74 @@ async function fetchByGenreAndRating(genre, rating) {
         const results = await response.json();
 
         console.log(results);
+
         topRatingsContainer.innerHTML = "";
+        genreRatingContainer(results, topRatingsContainer);
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
-
-            topRatingsContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="genre-all">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+        topRatingsContainer2.innerHTML = "";
+        genreRatingContainer(results, topRatingsContainer2);
+        
 
     }
     catch (error) {
         console.log(error);
     }
 }
+
+function genreRatingContainer(results, container) {
+    for (let i = 0; i < results.length; i++) {
+        console.log(results[i]);
+
+        container.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
+                                        <img src="${results[i].images[0].src}" class="genre-all">
+                                        <h4>${results[i].name}</h4>
+                                        <div class="ratings">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </a>`;
+    }
+}
+
+
+
+
+
+
+
+// async function fetchByGenreAndRating(genre, rating) {
+    
+//     try {
+//         const response = await fetch(url + "?category=" + genre + "&rating=" + rating);
+//         const results = await response.json();
+
+//         console.log(results);
+//         topRatingsContainer.innerHTML = "";
+
+//         for (let i = 0; i < results.length; i++) {
+//             console.log(results[i]);
+
+//             topRatingsContainer.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
+//                                             <img src="${results[i].images[0].src}" class="genre-all">
+//                                             <h4>${results[i].name}</h4>
+//                                             <div class="ratings">
+//                                                 <i class="fas fa-star"></i>
+//                                                 <i class="fas fa-star"></i>
+//                                                 <i class="fas fa-star"></i>
+//                                                 <i class="fas fa-star"></i>
+//                                                 <i class="fas fa-star"></i>
+//                                             </div>
+//                                         </a>`;
+//         }
+
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
 async function fetchByGenreAndTag(genre, tag) {
     
@@ -106,36 +159,36 @@ async function fetchByGenreAndTag(genre, tag) {
 
 // functionss logged in
 
-async function fetchByGenre2(genre) {
-    try {
-        const response = await fetch(url + "?category=" + genre);
-        const results = await response.json();
+// async function fetchByGenre2(genre) {
+//     try {
+//         const response = await fetch(url + "?category=" + genre);
+//         const results = await response.json();
 
-        console.log(results);
-        filmContainer2.innerHTML = "";
+//         console.log(results);
+//         filmContainer2.innerHTML = "";
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i]);
+//         for (let i = 0; i < results.length; i++) {
+//             console.log(results[i]);
 
-            filmContainer2.innerHTML += `<a href="filmdetailsloggedin.html?id=${results[i].id}" class="filminfo"> 
-                                            <img src="${results[i].images[0].src}" class="film-img">
-                                            <h4>${results[i].name}</h4>
-                                            <div class="ratings">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </a>`;
-        }
+//             filmContainer2.innerHTML += `<a href="filmdetailsloggedin.html?id=${results[i].id}" class="filminfo"> 
+//                                             <img src="${results[i].images[0].src}" class="film-img">
+//                                             <h4>${results[i].name}</h4>
+//                                             <div class="ratings">
+//                                                 <i class="far fa-star"></i>
+//                                                 <i class="far fa-star"></i>
+//                                                 <i class="far fa-star"></i>
+//                                                 <i class="far fa-star"></i>
+//                                                 <i class="far fa-star"></i>
+//                                                 <i class="far fa-star"></i>
+//                                             </div>
+//                                         </a>`;
+//         }
 
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
 async function fetchByGenreAndRating2(genre, rating) {
     
