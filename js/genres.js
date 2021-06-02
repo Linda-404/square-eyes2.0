@@ -62,7 +62,13 @@ function genresContainer(results, container) {
     for (let i = 0; i < results.length; i++) {
         console.log(results[i]);
 
-        container.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
+        let filmUrl = "filmdetails.html";
+
+        if (loggedin) {
+            filmUrl = "filmdetailsloggedin.html";
+        }
+
+        container.innerHTML += `<a href="${filmUrl}?id=${results[i].id}" class="filminfo"> 
                                         <img src="${results[i].images[0].src}" class="genre-all">
                                         <h4>${results[i].name}</h4>
                                         <div class="ratings">

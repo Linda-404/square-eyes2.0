@@ -66,8 +66,12 @@ function checkLoginStatus(path, loggedin) {
 function genreContainer(results, container) {
     for (let i = 0; i < results.length; i++) {
         console.log(results[i]);
+        let filmUrl = "filmdetails.html";
 
-        container.innerHTML += `<a href="filmdetails.html?id=${results[i].id}" class="filminfo"> 
+        if (loggedin) {
+            filmUrl = "filmdetailsloggedin.html";
+        }
+        container.innerHTML += `<a href="${filmUrl}?id=${results[i].id}" class="filminfo"> 
                                             <img src="${results[i].images[0].src}" class="film-img">
                                             <h4>${results[i].name}</h4>
                                             <div class="ratings">
