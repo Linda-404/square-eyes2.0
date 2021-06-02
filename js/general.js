@@ -16,10 +16,10 @@ async function fetchByGenre(genre) {
         console.log(results);
         
         filmContainer.innerHTML = "";
-        genreContainer(results, filmcontainer);
+        genreContainer(results, filmContainer);
     
         filmContainer2.innerHTML = "";
-        genreContainer(results, filmcontainer2);     
+        genreContainer(results, filmContainer2);     
         
 
     }
